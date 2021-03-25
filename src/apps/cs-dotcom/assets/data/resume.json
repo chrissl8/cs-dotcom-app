@@ -1,0 +1,119 @@
+[
+  {
+    "rank": "1",
+    "company": "Kroll Bond Rating Agency",
+    "jobTitle": "Senior Software Engineer",
+    "location": "Dresher, Pennsylvania",
+    "jobStart": "July 2020",
+    "jobEnd": "Present",
+    "jobDescription": [
+      "Plan, develop and execute UI test scripts for the KBRA KFI product, written in the Cypress testing library",
+      "Maintain and provide ownership of UI test continuous integration suite",
+      "Work with product owners and stakeholders to plan and develop a user-driven testing strategy for the KBRA KFI product",
+      "Align with fellow developers to ensure that quality is baked into deliverables from the onset and is continually monitored"
+    ]
+  },
+  {
+    "rank": "2",
+    "company": "Kroll Bond Rating Agency",
+    "jobTitle": "Software Engineer (QA Automation Developer II)",
+    "location": "Dresher, Pennsylvania",
+    "jobStart": "Nov 2018",
+    "jobEnd": "July 2020",
+    "jobDescription": [
+      "Plan, develop and execute automated test scripts and suite for the KBRA Analytics CMS project, written in TestCafe and Cypress JavaScript testing libraries",
+      "Work closely on an agile team with developers and product stakeholders to develop and execution of manual test scenarios, along with performing regression and smoke testing as part of user story completion",
+      "Manage ownership of automated test suite for the CMS project along with managing Jenkins CI suite to ensure ongoing product quality during the development cycle",
+      "Discuss testing methods and concerns with product owner along with financial/business end users to align with our shared product vision",
+      "Update existing automation code based on new requirements and user interface updates",
+      "Provide ownership of the automation suite, plan new testing scenarios to achieve optimal E2E test coverage, improve existing test performance and research innovative ways for automation to provide the most value"
+    ]
+  },
+  {
+    "rank": "3",
+    "company": "Sparta Systems",
+    "jobTitle": "Quality Engineer",
+    "location": "Hamilton, New Jersey",
+    "jobStart": "May 2016",
+    "jobEnd": "Nov 2018",
+    "jobDescription": [
+      "Developed and executed manual and automated user story tests against Sparta’s entire product suite to ensure superior software quality",
+      "Provided testing efforts to contribute towards completion of Sparta’s next-generation TrackWise version 9.0 project, TrackWise version 9.3 project along with Stratas and TrackWise Digital cloud platforms",
+      "Contributed towards completion of QA release activities including sanity testing, regression testing and validation efforts",
+      "Worked cross-functionally with developers, product management, and support to prevent, report, and resolve product defects",
+      "Followed Agile methodology by participating in requirements review sessions, daily standup meetings, team sprint retrospectives and product demonstrations",
+      "Assisted in the development of functional requirements documentation for validation package traceability"
+    ]
+  }
+  ,
+  {
+    "rank": "4",
+    "company": "Sparta Systems",
+    "jobTitle": "Customer Support Engineer",
+    "location": "Hamilton, New Jersey",
+    "jobStart": "July 2013",
+    "jobEnd": "May 2016",
+    "jobDescription": [
+      "Investigated and resolved Sparta’s J2EE/Servlet-based TrackWise EQMS solution customer 2nd Tier issues",
+      "Investigation of issues performed both remotely over web meetings and internally through issue reproduction, analysis, database queries and Java source code reviews as necessary",
+      "Developed and executed custom SQL queries as necessary to determine if any data issues may be present, as well as execute department-approved scripts for certain identified issues (Oracle & SQL Server)",
+      "Developed internal license file utility to fetch and replace or add new license files for TrackWise software installations",
+      "License utility written in Java SE 7 utilizing Swing/AWT components as well as the Apache Commons framework for the actual file handling operations",
+      "Developed environment to aid the global team with any issues pertaining to our proprietary inbound & outbound web service APIs",
+	  "Development environment contains several test J2EE services running Apache Tomcat 7, with the ability to generate custom WSDL-based web services on the fly to connect with TrackWise outbound web service configurations and reproduce issues",
+      "In addition, this environment also contains several Java Swing/AWT applications which implement Sparta’s proprietary inbound web service APIs connected to a test TrackWise environment to assist with any possible issue reproduction scenarios",
+      "Collaborate with cross-functional teams to determine innovative methodologies for issue resolution and contribute to a shared knowledge base",
+      "Maintain accurate, detailed and descriptive log of all open managed customer cases through Salesforce CRM ticketing system, providing suggestions and development improvements to management team through its use"
+    ]
+  }
+  ,
+  {
+    "rank": "5",
+    "company": "Tata Consultancy Services",
+    "jobTitle": "Software Engineer",
+    "location": "Jersey City, New Jersey",
+    "jobStart": "July 2012",
+    "jobEnd": "April 2013",
+    "jobDescription": [
+      "Assisted client manual document file transfer and data entry activities",
+      "Traveled to Cincinnati, Ohio and Chennai, India for a ten-week technology training and on-boarding program"
+    ]
+  },
+  {
+    "rank": "6",
+    "company": "Celerant Technology Corp",
+    "jobTitle": "Software Support Technician",
+    "location": "Staten Island, New York",
+    "jobStart": "October 2011",
+    "jobEnd": "June 2012",
+    "jobDescription": [
+      "Handled various client inquiries and issues with our retail management software",
+      "Provided quality solutions for clients through a variety of methods such as web meetings, issue reproduction and analysis",
+      "Developed various SQL queries/statements for customer issue resolution as necessary"
+    ]
+  },
+  {
+    "rank": "7",
+    "company": "Parking Systems",
+    "jobTitle": "Valet Attendant",
+    "location": "Greater New York City Area",
+    "jobStart": "October 2008",
+    "jobEnd": "November 2010",
+    "jobDescription": [
+      "As the first and last person to greet all customers at various public and private events, ensured superior customer service and proper parking standards",
+      "Assured all customers needs were met, and were 100% satisfied with the service",
+      "Safely, responsibly and properly drove and parked customer's vehicles with care and precision"
+    ]
+  },
+  {
+    "rank": "8",
+    "company": "Empire Dental Laboratory",
+    "jobTitle": "Technician Assistant",
+    "location": "Staten Island, New York",
+    "jobStart": "July 2003",
+    "jobEnd": "December 2008",
+    "jobDescription": [
+      "Assisted in the creation of removable dental appliances such as dentures, bleaching trays and mouth guards."
+    ]
+  }
+]

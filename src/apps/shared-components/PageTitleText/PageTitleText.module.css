@@ -1,0 +1,19 @@
+.Blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 499px) {
+  .SubHeaderText {
+    font-size: 0.8em;
+  }
+
+  .ResponsivePageTitle {
+    padding-top: 2.5em;
+  }
+}

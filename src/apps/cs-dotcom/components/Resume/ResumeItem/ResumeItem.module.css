@@ -1,0 +1,21 @@
+.ResumeItem {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border: 1px solid #dcdcdc;
+  background-color: #dcdcdc;
+  padding: 1em;
+}
+
+@media (max-width: 499px) {
+  .ResumeItems {
+    padding: 0.3em;
+  }
+  li {
+    font-size: 0.8em;
+    margin-left: -2em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+}

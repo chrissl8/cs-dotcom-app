@@ -3,3 +3,9 @@
   height: auto;
   padding: 4px;
 }
+
+@media (max-width: 499px) {
+  .InfoPanelImage img {
+    padding: 0px;
+  }
+}

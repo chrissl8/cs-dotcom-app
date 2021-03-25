@@ -1,0 +1,12 @@
+.ResumeItems {
+  margin-left: 10em;
+  margin-right: 10em;
+  text-align: left;
+}
+
+@media (max-width: 499px) {
+  .ResumeItems {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}

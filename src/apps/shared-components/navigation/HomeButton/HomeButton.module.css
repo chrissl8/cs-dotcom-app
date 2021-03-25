@@ -1,0 +1,19 @@
+.HomeButton img {
+  width: 50px;
+  z-index: 100;
+  position: fixed;
+  cursor: pointer;
+  right: 1%;
+  opacity: 0.5;
+}
+
+.HomeButton img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 499px) {
+  .HomeButton img {
+    right: 4%;
+    top: 1%;
+  }
+}

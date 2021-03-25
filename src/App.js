@@ -7,6 +7,7 @@ import Apps from "./apps/cs-dotcom/containers/Apps/Apps";
 import Photography from "./apps/cs-dotcom/containers/Photography/Photography";
 import Contact from "./apps/cs-dotcom/containers/Contact/Contact";
 import Layout from "./apps/cs-dotcom/containers/Layout/Layout";
+import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 
 class App extends Component {
@@ -15,12 +16,14 @@ class App extends Component {
       <div className="App">
         <Layout>
           <Switch>
-            <Route path="/" exact component={Homepage} />
-            <Route path="/resume" component={Resume} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/apps" component={Apps} />
-            <Route path="/photography" component={Photography} />
-            <Route path="/contact" component={Contact} />
+            <ScrollToTop>
+              <Route path="/" exact component={Homepage} />
+              <Route path="/resume" component={Resume} />
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/apps" component={Apps} />
+              <Route path="/photography" component={Photography} />
+              <Route path="/contact" component={Contact} />
+            </ScrollToTop>
           </Switch>
         </Layout>
       </div>

@@ -15,3 +15,12 @@
   height: 3px;
   background-color: black;
 }
+
+.DrawerToggle img {
+  height: 3em;
+  opacity: 0.5;
+}
+
+.DrawerToggle img:hover {
+  opacity: 1;
+}
