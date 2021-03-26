@@ -1,0 +1,127 @@
+[
+    {
+        "rank":"1",
+        "skill":"JavaScript"
+    },
+    {
+        "rank":"2",
+        "skill":"React"
+    },
+    {
+        "rank":"3",
+        "skill":"HTML/CSS"
+    },
+    {
+        "rank":"4",
+        "skill":"NoSQL"
+    },
+    {
+        "rank":"5",
+        "skill":"Node.js"
+    },
+    {
+        "rank":"6",
+        "skill":"Cypress"
+    },
+    {
+        "rank":"7",
+        "skill":"TestCafe"
+    },
+    {
+        "rank":"8",
+        "skill":"Mocha"
+    },
+    {
+        "rank":"9",
+        "skill":"Selenium"
+    },
+    {
+        "rank":"10",
+        "skill":"Java"
+    },
+    {
+        "rank":"11",
+        "skill":"SQL"
+    },
+    {
+        "rank":"12",
+        "skill":"Gherkin"
+    },
+    {
+        "rank":"13",
+        "skill":"Ruby on Rails"
+    },
+    {
+        "rank":"14",
+        "skill":"KBRA Financial Intelligence"
+    },
+    {
+        "rank":"15",
+        "skill":"GitLab"
+    },
+    {
+        "rank":"16",
+        "skill":"Node Package Manager (npm)"
+    },
+    {
+        "rank":"17",
+        "skill":"Microsoft Azure Portal"
+    },
+    {
+        "rank":"18",
+        "skill":"TrackWise/TrackWise Digital"
+    },
+    {
+        "rank":"19",
+        "skill":"Salesforce Platform"
+    },
+    {
+        "rank":"20",
+        "skill":"OpKey"
+    },
+    {
+        "rank":"21",
+        "skill":"Atlassian Suite"
+    },
+    {
+        "rank":"22",
+        "skill":"Crystal Reports"
+    },
+    {
+        "rank":"23",
+        "skill":"Oracle Database"
+    },
+    {
+        "rank":"24",
+        "skill":"SQL Server"
+    },
+    {
+        "rank":"25",
+        "skill":"Git/GitHub"
+    },
+    {
+        "rank":"26",
+        "skill":"Software Quality Assurance"
+    },
+    {
+        "rank":"27",
+        "skill":"Cloud/SaaS Platforms"
+    },
+    {
+        "rank":"28",
+        "skill":"Automated Web UI Testing"
+    },
+    {
+        "rank":"29",
+        "skill":"Developing Test Cases"
+    },
+    {
+        "rank":"30",
+        "skill":"Web Design"
+    }
+    ,
+    {
+        "rank":"31",
+        "skill":"Software Development"
+    }
+]

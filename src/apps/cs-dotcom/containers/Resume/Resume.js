@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PageTitleText from './../../../shared-components/PageTitleText/PageTitleText';
-import ResumeItems from '../../components/Resume/ResumeItems/ResumeItems';
 import HomeButton from '../../../shared-components/navigation/HomeButton/HomeButton';
+import ResumeItems from '../../components/Resume/ResumeItems/ResumeItems';
 
 class Resume extends Component {
 

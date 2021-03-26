@@ -1,0 +1,121 @@
+[
+    {
+      "rank": "1",
+      "institution": "DeVry University North Brunswick, New Jersey",
+      "program":"Bachelors of Science",
+      "date": "January 2009 – February 2012",
+      "comment": "Computer Information Systems: Database Management"
+    },
+    {
+        "rank": "2",
+        "institution": "Thinkful",
+        "program":"Front End Web Development Course: HTML, CSS, JavaScript and jQuery",
+        "date": "July 2015 – September 2015",
+        "comment": ""
+    },
+    {
+        "rank": "3",
+        "institution": "Tottenville High School",
+        "program":"NYS High School Diploma",
+        "date": "September 2003 – June 2007",
+        "comment": "Dental Technology Program"
+    },
+    {
+        "rank": "4",
+        "institution": "Udemy",
+        "program":"Cypress -Modern Automation Testing from Scratch + Framework",
+        "date": "September 2020",
+        "comment": "Credential ID UC-3cdb43b9-435a-4901-85ba-db412efdf51b"
+    },
+    {
+        "rank": "5",
+        "institution": "Pluralsight",
+        "program":"C# Fundamentals",
+        "date": "February 2020",
+        "comment": "Credential ID Rep ID 4127"
+    },
+    {
+        "rank": "6",
+        "institution": "Sparta Systems, Inc.",
+        "program":"Fundamentals of TrackWise Web Services",
+        "date": "March 2016",
+        "comment": ""
+    },
+    {
+        "rank": "7",
+        "institution": "Salesforce Trailhead",
+        "program":"Salesforce Admin Beginner",
+        "date": "March 2016",
+        "comment": ""
+    },
+    {
+        "rank": "8",
+        "institution": "Salesforce Trailhead",
+        "program":"Salesforce Admin Intermediate",
+        "date": "March 2016",
+        "comment": ""
+    },
+    {
+        "rank": "9",
+        "institution": "Udemy",
+        "program":"Completion of Java Tutorial for Complete Beginners",
+        "date": "March 2015",
+        "comment": "Credential ID UC-5J3TL1F4"
+    },
+    {
+        "rank": "10",
+        "institution": "Service Strategies",
+        "program":"Certified Support Professional",
+        "date": "August 2014",
+        "comment": ""
+    },
+    {
+        "rank": "11",
+        "institution": "Sparta Systems, Inc.",
+        "program":"TrackWise Analytics® for Report Developers",
+        "date": "August 2013",
+        "comment": ""
+    },
+    {
+        "rank": "12",
+        "institution": "Sparta Systems, Inc.",
+        "program":"Advanced Crystal Reports Design for TrackWise",
+        "date": "August 2013",
+        "comment": ""
+    },
+    {
+        "rank": "13",
+        "institution": "Sparta Systems, Inc.",
+        "program":"Crystal Reports Design for TrackWise",
+        "date": "August 2013",
+        "comment": ""
+    },
+    {
+        "rank": "14",
+        "institution": "Sparta Systems, Inc.",
+        "program":"Intermediate TrackWise Configuration and Administration",
+        "date": "August 2013",
+        "comment": ""
+    },
+    {
+        "rank": "15",
+        "institution": "Sparta Systems, Inc.",
+        "program":"Technical Fundamentals of TrackWise",
+        "date": "August 2013",
+        "comment": ""
+    },
+    {
+        "rank": "16",
+        "institution": "Sparta Systems, Inc.",
+        "program":"TrackWise: Introduction to Configuration and Administration",
+        "date": "August 2013",
+        "comment": ""
+    },
+    {
+        "rank": "17",
+        "institution": "Sparta Systems, Inc.",
+        "program":"Introduction to TrackWise",
+        "date": "July 2013",
+        "comment": ""
+    }
+]

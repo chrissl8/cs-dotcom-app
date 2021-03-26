@@ -1,0 +1,23 @@
+.SkillsItems {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border: 1px solid #dcdcdc;
+  background-color: #dcdcdc;
+  padding: 1em;
+  border-radius: 45px;
+}
+
+.SkillsItems span {
+  padding: 10px;
+  border: 2px solid #c0c0c0;
+  margin: 6px;
+  display: inline-block;
+  background-color: #c0c0c0;
+  border-radius: inherit;
+}
+
+@media (max-width: 499px) {
+  .SkillsItems span {
+    font-size: 0.7em;
+  }
+}

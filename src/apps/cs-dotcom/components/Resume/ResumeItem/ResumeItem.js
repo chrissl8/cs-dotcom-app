@@ -10,8 +10,8 @@ const resumeItem = (props) => {
 
     return (
         <div className={classes.ResumeItem}>
-            <p className={classes.ResumeItemTitle}><strong>{props.company}</strong>: <i>{props.jobTitle}</i></p>
-            <p className={classes.ResumeItemMeta}>{props.location} &#183; {props.jobStart} - {props.jobEnd}</p> 
+            <p><strong>{props.company}</strong>: <i>{props.jobTitle}</i></p>
+            <p>{props.location} &#183; {props.jobStart} - {props.jobEnd}</p> 
             <ul>
                 {descriptionItems}
             </ul>           

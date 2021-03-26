@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import PageTitleText from './../../../shared-components/PageTitleText/PageTitleText';
+import HomeButton from '../../../shared-components/navigation/HomeButton/HomeButton';
 
 class Apps extends Component {
   render() {
     return (
       <div>
-        <h1>ChrisSlaight.com : Apps</h1>
+        <HomeButton />
+        <PageTitleText text="Apps"/>
+        <p>Coming soon!</p>
       </div>
     );
   }

@@ -4,7 +4,7 @@
   transition: transform 1s;
 }
 .TitleCard:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .TitleCard img {
@@ -13,6 +13,7 @@
   object-fit: cover;
   max-height: 100%;
   position: relative;
+  border-radius: 45px;
 }
 
 .CardText {

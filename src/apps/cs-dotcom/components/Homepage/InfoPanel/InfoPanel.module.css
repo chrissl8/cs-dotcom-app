@@ -2,10 +2,14 @@
   width: 100%;
   height: auto;
   padding: 4px;
+  border-bottom-left-radius: 45px;
+  border-top-right-radius: 45px;
 }
 
 @media (max-width: 499px) {
   .InfoPanelImage img {
     padding: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 }

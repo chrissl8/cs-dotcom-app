@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+import PageTitleText from './../../../shared-components/PageTitleText/PageTitleText';
+import HomeButton from '../../../shared-components/navigation/HomeButton/HomeButton';
+import PhotographyItems from './../../components/Photography/PhotographyItems/PhotographyItems';
 
 class Photography extends Component {
   render() {
     return (
       <div>
-        <h1>ChrisSlaight.com : Photography</h1>
+        <HomeButton />
+        <PageTitleText text="Photography"/>
+        <PhotographyItems />
       </div>
     );
   }

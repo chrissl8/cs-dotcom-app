@@ -1,0 +1,22 @@
+.Contact {
+  margin: 1em 23em 1em 23em;
+  border: 1px solid #dcdcdc;
+  background-color: #dcdcdc;
+  padding: 1em;
+  border-radius: 45px;
+}
+
+.ContactItem {
+  padding: 10px;
+}
+
+.ContactItem a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 499px) {
+  .Contact {
+    margin: 1em 2em 1em 2em;
+  }
+}

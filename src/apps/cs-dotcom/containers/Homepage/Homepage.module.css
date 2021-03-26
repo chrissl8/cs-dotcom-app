@@ -3,7 +3,7 @@
   grid-template-columns: 55% 45%;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 769px) {
   .Homepage {
     display: inline;
   }
