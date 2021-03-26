@@ -1,0 +1,11 @@
+.ProjectItems {
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+@media (max-width: 769px) {
+  .ProjectItems {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}

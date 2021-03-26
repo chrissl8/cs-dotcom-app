@@ -11,8 +11,8 @@ const navigationItems = (props) => (
     </NavigationItem>
     <NavigationItem link="/resume">
       <FontAwesomeIcon size="1x" icon={faPaperclip} /> Resume</NavigationItem>
-    <NavigationItem link="/portfolio">
-      <FontAwesomeIcon size="1x" icon={faFolder} /> Portfolio</NavigationItem>
+    <NavigationItem link="/projects">
+      <FontAwesomeIcon size="1x" icon={faFolder} /> Projects</NavigationItem>
     <NavigationItem link="/apps">
       <FontAwesomeIcon size="1x" icon={faCode} /> Apps</NavigationItem>
     <NavigationItem link="/photography">

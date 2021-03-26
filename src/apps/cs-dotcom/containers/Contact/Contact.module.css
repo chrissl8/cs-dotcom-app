@@ -15,6 +15,10 @@
   color: black;
 }
 
+.ContactText {
+  padding: 0.5em;
+}
+
 @media (max-width: 499px) {
   .Contact {
     margin: 1em 2em 1em 2em;

@@ -9,7 +9,7 @@ const tileLayout = (props) => (
       <div className={classes.Column}><TileCard title="Resume" image="nyc" page="resume"/></div>
     </div>
     <div className={classes.Row}>
-      <div className={classes.Column}><TileCard title="Portfolio" image="aesthetic" page="portfolio"/></div>
+      <div className={classes.Column}><TileCard title="Projects" image="aesthetic" page="projects"/></div>
       <div className={classes.Column}><TileCard title="Apps" image="clouds" page="apps"/></div>
     </div>
     <div className={classes.Row}>

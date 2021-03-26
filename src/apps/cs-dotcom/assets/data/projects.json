@@ -1,0 +1,98 @@
+[
+    {
+        "rank": "1",
+        "name":"Personal Website 2.0 (2019)",
+        "description":"This was my first major redesign of this very site. While it wasn't the prettiest code-wise and used older jQuery technology, I did enjoy the single page app experience and received good feedback regarding the design.",
+        "url":"https://chrisslaight.com/spwa/"
+    },
+    {
+        "rank": "2",
+        "name":"ShopWithRails",
+        "description":"Probably most useful side project to date, developed a simple multi-tenant shopping list app in Ruby on Rails. Allows a user to define a set of lists, add items to be purchased, and mark them off as purchased as they go about their shopping. During the ShopWithRails development phase, it was intended as a Christmas shopping app, however I've been regularly using my 'production' environment (Heroku free tier) for routine grocery shopping, two out-of-state moves, several vacations and three Christmas shopping seasons. If I need to create a list and stay organized, it's my go to.",
+        "url":"https://chrisslaight.com/images/swr.png"
+    },
+    {
+        "rank": "3",
+        "name":"Personal Website 1.0 (2015)",
+        "description":"The original design of this very site, my own personal web portfolio. While the design here continues to evolve since it's inception, I've kept the original archived on Github pages to showcase its design.",
+        "url":"http://chrissl8.github.io/chris-slaight-portfolio/"
+    },
+    {
+        "rank": "4",
+        "name":"Recipe Manager Application with Rails",
+        "description":"A simple recipe manager application written in Ruby on Rails, which was part of Mashrur Hossain's 'The Professional Ruby on Rails Developer' course on Udemy.com.",
+        "url":"http://www.chrisslaight.com/thinkful/recipe-manager-screenshot.png"
+    },
+    {
+        "rank": "5",
+        "name":"GTA V PS4 Cheats",
+        "description":"A small side project of mine, rather than utilizing the ad-laden iPhone apps to grab my most-used cheat codes in Grand Theft Auto V, decided to whip up a simple page of my own. Mobile-friendly too, of course.",
+        "url":"http://chrisslaight.com/gta"
+    },
+    {
+        "rank": "6",
+        "name":"Chris's Photo Explorer",
+        "description":"My Thinkful Front End Web Development course capstone project, and an evolving work in progress: A simple way to access your Instagram media based on the selected date, through the use of AJAX calls to the Instagram API.",
+        "url":"http://chrisslaight.com/photoexplorer/login.html"
+    },
+    {
+        "rank": "7",
+        "name":"StackOverflow Reputation Builder",
+        "description":"Implemented the second form functionality for the provided template to interact with the StackExchange API to find the top answerers for any given topic on StackOverflow.com.",
+        "url":"http://chrissl8.github.io/stack-overflow-app/"
+    },
+    {
+        "rank": "8",
+        "name":"ThinkfulTube Project",
+        "description":"A minimalist sample application utilizing AJAX to parse JSON response objects fromYouTube API based on user search, to return the five most relevant videos.",
+        "url":"http://www.chrisslaight.com/thinkful/thinkful-tube/"
+    },
+    {
+        "rank": "9",
+        "name":"Plane and Simple Quiz",
+        "description":"Think you know your planes? An interactive quiz on commercial aviation topics utilizing minimalist design, jQuery effects and object-oriented JavaScript.",
+        "url":"http://chrissl8.github.io/quiz-app/"
+    },
+    {
+        "rank": "10",
+        "name":"HOT or COLD Number Guessing Game",
+        "description":"Can you guess the number? An addicting game where you try to guess whatever random number JavaScript has on it's mind today.",
+        "url":"http://chrissl8.github.io/hot-or-cold/"
+    },
+    {
+        "rank": "11",
+        "name":"FizzBuzz App Refactored with User Input",
+        "description":"A refactored version of the below JavaScript/jQuery FizzBuzz app, with user input.",
+        "url":"http://chrissl8.github.io/fizzbuzz-refactor/"
+    },
+    {
+        "rank": "12",
+        "name":"FizzBuzz App Programming Challenge",
+        "description":"A classic coding exercise whereby numbers divisible by 3 and 5 are programmatically replaced by the words 'fizz' and 'buzz', respectively. Written in JavaScript/jQuery.",
+        "url":"http://chrissl8.github.io/fizzbuzz/"
+    },
+    {
+        "rank": "13",
+        "name":"Where's The Paper Towels? • jQuery Shopping List",
+        "description":"An interactive shopping list app in a clean, beautiful and intuitive design that lets you add, remove or check off items off of your shopping list. Makes use of basic HTML/CSS design, with functionality and DOM manipulation using jQuery and JavaScript.",
+        "url":"http://chrissl8.github.io/shoppinglist/"
+    },
+    {
+        "rank": "14",
+        "name":"Streetfighter jQuery Demo",
+        "description":"Control Ryu from the 1987 classic Street Fighter in this demonstration of some jQuery basics, such as manipulating DOM elements, object animations and user input event listeners.",
+        "url":"http://chrissl8.github.io/jquery-streetfighter/"
+    },
+    {
+        "rank": "15",
+        "name":"Thinkful Startup 'Karma' Landing Page Clone",
+        "description":"A fully-styled clone of the landing homepage of the Wifi-hotspot startup Karma.",
+        "url":"https://chrissl8.github.io/karmaclone/"
+    },
+    {
+        "rank": "16",
+        "name":"Thinkful FEWD 'Hack The Times' Project",
+        "description":"A lighthearted example of using Google Chrome's Developer Tools and Inspect Element features to harmlessly observe, inject or remove HTML/CSS/JavaScript elements from a web page.",
+        "url":"http://i.imgur.com/G5ZBHj1.png"
+    }
+]
