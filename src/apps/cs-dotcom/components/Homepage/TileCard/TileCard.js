@@ -21,9 +21,14 @@ const tileCard = (props) => {
         default: selectedImage = me_beard;
     }
 
+    let attachedClasses = [classes.TitleCard];
+    if (props.image === 'me_beard') {
+        attachedClasses = [classes.TitleCard, classes.TitleCardMe];
+    }
+
     return (
         <Link to={props.page}>
-            <div className={classes.TitleCard}>
+            <div className={attachedClasses.join(' ')}>
                 <img src={selectedImage} alt={props.image}/>
                 <div className={classes.CardText}><h2>{props.title}</h2></div>
             </div>

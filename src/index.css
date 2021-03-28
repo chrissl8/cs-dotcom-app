@@ -15,4 +15,22 @@ body {
   width: auto !important;
   overflow-x: hidden !important;
   background-color: #eeeeee;
+  background-image: url("https://chrisslaight.com/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#bg-image-attribution-link {
+  text-align: center;
+}
+
+#bg-image-attribution-link a {
+  text-decoration: none;
+  color: lightgrey;
+  opacity: 0.5;
+  font-size: 0.8em;
+  bottom: 0;
+  width: 100%;
 }

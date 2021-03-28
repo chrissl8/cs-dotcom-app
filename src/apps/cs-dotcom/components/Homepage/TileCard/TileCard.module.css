@@ -14,6 +14,7 @@
   max-height: 100%;
   position: relative;
   border-radius: 45px;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
 }
 
 .CardText {
@@ -26,4 +27,8 @@
 .CardText h2 {
   text-shadow: 5px 5px 10px black;
   color: white;
+}
+
+.TitleCardMe {
+  cursor: default;
 }
