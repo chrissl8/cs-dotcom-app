@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #ebebed;
 }
 
 code {
@@ -14,8 +15,8 @@ html,
 body {
   width: auto !important;
   overflow-x: hidden !important;
-  background-color: #eeeeee;
-  background-image: url("https://chrisslaight.com/images/bg.jpg");
+  background-color: #1e1e1e;
+  background-image: url("https://chrisslaight.com/images/black-smooth-textured-paper.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

@@ -1,10 +1,11 @@
 import React from "react";
 import classes from "./DrawerToggle.module.css";
-import menuIcon from './../../../../cs-dotcom/assets/icons/menu_transparent.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const drawerToggle = (props) => (
   <div className={classes.DrawerToggle} onClick={props.clicked}>
-    <img src={menuIcon} alt="Menu" />
+    <FontAwesomeIcon size="3x" icon={faBars} />
   </div>
 );
 

@@ -2,6 +2,10 @@
   animation: blinker 0.8s linear infinite;
 }
 
+.InfoPanelItemHeaderText {
+  color: #24cc44;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0;

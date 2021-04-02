@@ -8,6 +8,10 @@
   }
 }
 
+.SubHeaderText {
+  color: #24cc44;
+}
+
 @media (max-width: 499px) {
   .SubHeaderText {
     font-size: 0.8em;
