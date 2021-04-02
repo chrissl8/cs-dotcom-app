@@ -1,127 +1,158 @@
 [
     {
         "rank":"1",
-        "skill":"JavaScript"
+        "skill":"JavaScript",
+        "level":"1"
     },
     {
         "rank":"2",
-        "skill":"React"
+        "skill":"React",
+        "level":"1"
     },
     {
         "rank":"3",
-        "skill":"HTML/CSS"
+        "skill":"HTML/CSS",
+        "level":"1"
     },
     {
         "rank":"4",
-        "skill":"NoSQL"
+        "skill":"NoSQL",
+        "level":"3"
     },
     {
         "rank":"5",
-        "skill":"Node.js"
+        "skill":"Node.js",
+        "level":"2"
     },
     {
         "rank":"6",
-        "skill":"Cypress"
+        "skill":"Cypress",
+        "level":"1"
     },
     {
         "rank":"7",
-        "skill":"TestCafe"
+        "skill":"TestCafe",
+        "level":"3"
     },
     {
         "rank":"8",
-        "skill":"Mocha"
+        "skill":"Mocha",
+        "level":"3"
     },
     {
         "rank":"9",
-        "skill":"Selenium"
+        "skill":"Selenium",
+        "level":"3"
     },
     {
         "rank":"10",
-        "skill":"Java"
+        "skill":"Java",
+        "level":"2"
     },
     {
         "rank":"11",
-        "skill":"SQL"
+        "skill":"SQL",
+        "level":"1"
     },
     {
         "rank":"12",
-        "skill":"Gherkin"
+        "skill":"Gherkin",
+        "level":"3"
     },
     {
         "rank":"13",
-        "skill":"Ruby on Rails"
+        "skill":"Ruby on Rails",
+        "level":"3"
     },
     {
         "rank":"14",
-        "skill":"KBRA Financial Intelligence"
+        "skill":"KBRA Financial Intelligence",
+        "level":"2"
     },
     {
         "rank":"15",
-        "skill":"GitLab"
+        "skill":"GitLab",
+        "level":"2"
     },
     {
         "rank":"16",
-        "skill":"Node Package Manager (npm)"
+        "skill":"Node Package Manager (npm)",
+        "level":"2"
     },
     {
         "rank":"17",
-        "skill":"Microsoft Azure Portal"
+        "skill":"Microsoft Azure Portal",
+        "level":"3"
     },
     {
         "rank":"18",
-        "skill":"TrackWise/TrackWise Digital"
+        "skill":"TrackWise/TrackWise Digital",
+        "level":"2"
     },
     {
         "rank":"19",
-        "skill":"Salesforce Platform"
+        "skill":"Salesforce Platform",
+        "level":"3"
     },
     {
         "rank":"20",
-        "skill":"OpKey"
+        "skill":"OpKey",
+        "level":"3"
     },
     {
         "rank":"21",
-        "skill":"Atlassian Suite"
+        "skill":"Atlassian Suite",
+        "level":"2"
     },
     {
         "rank":"22",
-        "skill":"Crystal Reports"
+        "skill":"Crystal Reports",
+        "level":"3"
     },
     {
         "rank":"23",
-        "skill":"Oracle Database"
+        "skill":"Oracle Database",
+        "level":"3"
     },
     {
         "rank":"24",
-        "skill":"SQL Server"
+        "skill":"SQL Server",
+        "level":"2"
     },
     {
         "rank":"25",
-        "skill":"Git/GitHub"
+        "skill":"Git/GitHub",
+        "level":"2"
     },
     {
         "rank":"26",
-        "skill":"Software Quality Assurance"
+        "skill":"Software Quality Assurance",
+        "level":"2"
     },
     {
         "rank":"27",
-        "skill":"Cloud/SaaS Platforms"
+        "skill":"Cloud/SaaS Platforms",
+        "level":"3"
     },
     {
         "rank":"28",
-        "skill":"Automated Web UI Testing"
+        "skill":"Automated Web UI Testing",
+        "level":"1"
     },
     {
         "rank":"29",
-        "skill":"Developing Test Cases"
+        "skill":"Developing Test Cases",
+        "level":"2"
     },
     {
         "rank":"30",
-        "skill":"Web Design"
+        "skill":"Web Design",
+        "level":"1"
     }
     ,
     {
         "rank":"31",
-        "skill":"Software Development"
+        "skill":"Software Development",
+        "level":"1"
     }
 ]

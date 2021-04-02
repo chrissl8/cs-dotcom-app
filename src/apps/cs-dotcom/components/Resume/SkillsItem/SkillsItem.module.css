@@ -1,0 +1,38 @@
+.SkillsItem {
+  padding: 10px;
+  border: 2px solid #c0c0c0;
+  margin: 6px;
+  display: inline-block;
+  background: rgba(75, 75, 75, 0.6);
+  border-radius: inherit;
+}
+
+.SkillsLevel1 {
+  font-size: 2rem;
+  text-shadow: 0px 0px 10px #fff;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.SkillsLevel2 {
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 5px #fff;
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.SkillsLevel3 {
+  font-size: 1rem;
+}
+
+@media (max-width: 499px) {
+  .SkillsLevel1 {
+    font-size: 1.5rem;
+  }
+
+  .SkillsLevel2 {
+    font-size: 1rem;
+  }
+
+  .SkillsLevel3 {
+    font-size: 0.7em;
+  }
+}
