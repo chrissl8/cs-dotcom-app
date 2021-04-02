@@ -4,6 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #ebebed;
+  background: rgba(0, 0, 0, 0);
 }
 
 code {
@@ -21,6 +22,8 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background: rgba(0, 0, 0, 0);
+  background-attachment: scroll;
 }
 
 body:before {
@@ -38,6 +41,7 @@ body:before {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 #bg-image-attribution-link {
