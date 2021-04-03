@@ -4,7 +4,6 @@ import classes from "./SkillsItem.module.css";
 const skillsItem = (props) => {
 
     let levelClass = null;
-    console.log(props);
 
     switch(props.level) {
         case '1':

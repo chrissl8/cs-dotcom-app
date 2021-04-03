@@ -1,0 +1,10 @@
+.LogoutButton {
+  z-index: 100;
+  position: fixed;
+  cursor: pointer;
+  right: 1%;
+  color: white;
+  text-decoration: none;
+  top: 1%;
+  margin-right: 5em;
+}

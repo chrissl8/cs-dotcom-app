@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./NavigationItems.module.css";
 import NavigationItem from "../NavigationItem/NavigationItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faCamera, faPaperclip, faFolder, faEnvelope, faCode} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCamera, faPaperclip, faFolder, faEnvelope, faCode, faUser} from '@fortawesome/free-solid-svg-icons';
 
 const navigationItems = (props) => (
   <ul className={classes.NavigationItems} onClick={props.clicked}>
@@ -19,6 +19,8 @@ const navigationItems = (props) => (
       <FontAwesomeIcon size="1x" icon={faCamera} /> Photography</NavigationItem>
     <NavigationItem link="/contact">
       <FontAwesomeIcon size="1x" icon={faEnvelope} /> Contact</NavigationItem>
+    <NavigationItem link="/admin">
+      <FontAwesomeIcon size="1x" icon={faUser} /> Admin</NavigationItem>
   </ul>
 );
 
