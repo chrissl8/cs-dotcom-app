@@ -1,4 +1,4 @@
-[
+{ "resume": [
   {
     "rank": "1",
     "company": "Kroll Bond Rating Agency",
@@ -115,5 +115,5 @@
     "jobDescription": [
       "Assisted in the creation of removable dental appliances such as dentures, bleaching trays and mouth guards."
     ]
-  }
-]
+  }]
+}

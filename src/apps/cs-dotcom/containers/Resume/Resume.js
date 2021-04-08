@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PageTitleText from './../../../shared-components/PageTitleText/PageTitleText';
 import HomeButton from '../../../shared-components/navigation/HomeButton/HomeButton';
 import ResumeItems from '../../components/Resume/ResumeItems/ResumeItems';
+import * as DataSource from './../../components/DataSource/DataSource';
 
 class Resume extends Component {
 
@@ -11,7 +12,7 @@ class Resume extends Component {
       <div>
         <HomeButton />
         <PageTitleText text="Resume"/>
-        <ResumeItems />
+        <ResumeItems employmentDataSource={DataSource.DATABASE}/>
       </div>
     );
   }
