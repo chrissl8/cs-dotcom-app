@@ -3,14 +3,14 @@ import axios from 'axios';
 import firebase from 'firebase';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import classes from './SkillsAdmin.module.css';
+import classes from './ProjectsAdmin.module.css';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 let beautify = require("json-beautify");
 const parseJson = require('parse-json');
 
-const SkillsAdmin = () => {
+const ProjectsAdmin = () => {
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -21,7 +21,7 @@ const SkillsAdmin = () => {
         },
       }));
 
-    const [skillsData, setSkillsData] = useState();
+    const [projectsData, setProjectsData] = useState();
     const [open, setOpen] = useState(false);
     const [messageText, setMessageText] = useState("");
     const [messageType, setMessageType] = useState("success"); 
@@ -38,11 +38,11 @@ const SkillsAdmin = () => {
         setOpen(false);
     };
 
-    const fetchSkillsData = () => {
+    const fetchProjectsData = () => {
         axios
-          .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/skills.json`)
+          .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/projects.json`)
           .then((res) => {
-            setSkillsData(beautify(res.data, null, 2, 80));
+            setProjectsData(beautify(res.data, null, 2, 80));
           }).then(() => {
             
         }).catch((err) => {
@@ -50,19 +50,19 @@ const SkillsAdmin = () => {
           });
       }
 
-      const sendSkillsDataToDB = () => {
+      const sendProjectsDataToDB = () => {
         firebase.auth().currentUser.getIdToken(true).then((idToken) => {
             const headers = {
                 'Content-Type': 'application/json',
               }
-            const patchUrl = 'https://cs-dotcom-app-default-rtdb.firebaseio.com/skills.json?auth=' + idToken;
+            const patchUrl = 'https://cs-dotcom-app-default-rtdb.firebaseio.com/projects.json?auth=' + idToken;
             try{
-                const skillsDataPayload = parseJson(skillsData);
+                const projectsDataPayload = parseJson(projectsData);
                axios
-            .patch(patchUrl, skillsDataPayload, headers)
+            .patch(patchUrl, projectsDataPayload, headers)
             .then((res) => {
                 setMessageType("success");
-                setMessageText("Successfully Saved Skills Data!");
+                setMessageText("Successfully Saved Projects Data!");
                 setOpen(true);
             }).catch((err) => {
                 console.log(err);
@@ -79,25 +79,25 @@ const SkillsAdmin = () => {
         });
       }
     
-      useEffect(() => {fetchSkillsData();},[]);
+      useEffect(() => {fetchProjectsData();},[]);
 
-      const saveSkillsData = (event) => {
+      const saveProjectsData = (event) => {
         event.preventDefault();
-        sendSkillsDataToDB();
+        sendProjectsDataToDB();
       }
 
       const handleFieldChange = (event) => {
-        setSkillsData(event.target.value);
+        setProjectsData(event.target.value);
       }
 
     return(
-        <div className={classes.SkillsCard}>
-            <h2>Skills Admin</h2>
-            <p>Use the below editor to modify Skills data, using the expected JSON format.</p>
-            <div className={classes.SkillsForm}>
-            <form onSubmit={saveSkillsData}> 
+        <div className={classes.ProjectsCard}>
+            <h2>Projects Admin</h2>
+            <p>Use the below editor to modify Projects data, using the expected JSON format.</p>
+            <div className={classes.ProjectsForm}>
+            <form onSubmit={saveProjectsData}> 
             <textarea 
-                value={skillsData}
+                value={projectsData}
                 onChange={handleFieldChange}
                 spellCheck="false"
             />
@@ -105,7 +105,7 @@ const SkillsAdmin = () => {
                 <Button color="primary" variant="text" type="submit">
                 Save
                 </Button>
-                <Button color="secondary" variant="text" onClick={fetchSkillsData} >
+                <Button color="secondary" variant="text" onClick={fetchProjectsData} >
                 Revert
                 </Button>
             </ButtonGroup>
@@ -122,4 +122,4 @@ const SkillsAdmin = () => {
     )
 }
 
-export default SkillsAdmin;
+export default ProjectsAdmin;

@@ -1,12 +1,17 @@
 [
     {
         "rank":"1",
-        "title":"Who_I_Am",
-        "description":"Highly ambitious and motivated software professional, my interests stem from a life long passion for technology and discovering how things work, near obsession with high quality software design and implementation, love of creatively solving problems, and developing solid code."
+        "icon":"faCode",
+        "description":"Ambitious, motivated and curious software professional, my interests stem from a life long passion for technology and discovering how things work, near obsession with high quality software design and implementation, love of creatively solving problems, and developing solid code. If it involves writing code I'm interested, though I particularly enjoy front end web technolgies and design."
     },
     {
         "rank":"2",
-        "title":"What_I_Like",
-        "description":"Outside of my professional life, I enjoy spending time with my friends and family, travelling and exploring new places, coding (including creating this website using React), '80s/'90s/'00s nostalgia, pool/beach days, gaming, drawing maps, photography, aviation, transportation, cars, automotive detailing and road trips."
+        "icon":"faUserAlt",
+        "description":"Outside of work, I also enjoy coding projects for fun (including creating this website using React), spending time with my friends and family, travelling and exploring new places, '80s/'90s/'00s nostalgia, hanging at the pool or beach, gaming, maps/cartography, photography, aviation, transportation, cars, automotive detailing and road trips."
+    },
+    {
+        "rank":"3",
+        "icon":"faMapMarkerAlt",
+        "description":"Located in the Greater New York City/New Jersey area, but prefer remote work."
     }
 ]

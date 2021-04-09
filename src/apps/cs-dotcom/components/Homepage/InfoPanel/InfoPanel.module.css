@@ -5,9 +5,16 @@
   border-radius: 20px;
 }
 
+.InfoPanelContent {
+  margin-top: -5rem;
+}
+
 @media (max-width: 499px) {
   .InfoPanelImage img {
     padding: 0px;
     border-radius: 0px;
+  }
+  .InfoPanelContent {
+    margin-top: -7rem;
   }
 }

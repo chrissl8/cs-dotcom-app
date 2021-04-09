@@ -3,7 +3,7 @@ import classes from './ResumeItems.module.css';
 import ResumeItem from './../ResumeItem/ResumeItem';
 import resumeJSONData from './../../../assets/data/resume.json';
 import EducationItem from './../EducationItem/EducationItem';
-import educationData from './../../../assets/data/education.json';
+import educationJSONData from './../../../assets/data/education.json';
 import SkillsItems from './../SkillsItems/SkillsItems';
 import axios from 'axios';
 import * as DataSource from '../../DataSource/DataSource';
@@ -12,6 +12,7 @@ class ResumeItems extends Component {
 
 state = {
     dbResumeData: [],
+    dbEducationData: []
   }
 
   componentDidMount() {
@@ -23,26 +24,44 @@ state = {
       .catch((err) => {
         console.log(err);
       });
+    axios
+      .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/education.json`)
+      .then((res) => {
+        this.setState({ dbEducationData: res.data.education });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
     render() {
 
-        let employmentDataSource = null;
+        let employmentDataObject, educationDataObject = null;
         switch(this.props.employmentDataSource) {
             case DataSource.JSON:
-                employmentDataSource = resumeJSONData.resume;
+                employmentDataObject = resumeJSONData.resume;
             break;
             case DataSource.DATABASE:
-                employmentDataSource = this.state.dbResumeData;
+                employmentDataObject = this.state.dbResumeData;
             break;
             default: 
-                employmentDataSource = resumeJSONData;
+                employmentDataObject = resumeJSONData.resume;
+        }
+        switch(this.props.educationDataSource) {
+            case DataSource.JSON:
+                educationDataObject = educationJSONData.education;
+            break;
+            case DataSource.DATABASE:
+                educationDataObject = this.state.dbEducationData;
+            break;
+            default: 
+                educationDataObject = educationJSONData.education;
         }
 
         return(
             <div className={classes.ResumeItems}>
                 <h2>Employment</h2>
-                {employmentDataSource.map((resumeEntry) => (
+                {employmentDataObject.map((resumeEntry) => (
                 <ResumeItem 
                     key={resumeEntry.rank}
                     company={resumeEntry.company}
@@ -54,7 +73,7 @@ state = {
                 />
             ))}
                 <h2>Education &amp; Certifications</h2>
-                {educationData.map((educationEntry) => (
+                {educationDataObject.map((educationEntry) => (
                     <EducationItem 
                         key={educationEntry.rank}
                         institution={educationEntry.institution}
@@ -64,7 +83,7 @@ state = {
                     />
                 ))}
                 <h2>Skills &amp; Expertise</h2>
-                <SkillsItems />
+                <SkillsItems skillsDataSource={DataSource.DATABASE}/>
             </div>
         )
     }

@@ -1,0 +1,5 @@
+@media (max-width: 499px) {
+  .MuiAccordionDetails-root {
+    padding: 8px 8px 16px;
+  }
+}

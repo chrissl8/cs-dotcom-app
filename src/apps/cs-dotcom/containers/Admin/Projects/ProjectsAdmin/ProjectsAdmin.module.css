@@ -1,9 +1,9 @@
-.EmploymentCard {
+.ProjectsCard {
   margin: auto;
   width: 80%;
 }
 
-.EmploymentForm textarea {
+.ProjectsForm textarea {
   width: 100%;
   height: 500px;
   color: #bb8c71;
@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 499px) {
-  .EmploymentCard {
+  .ProjectsCard {
     width: 98% !important;
   }
 }

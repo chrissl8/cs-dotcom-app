@@ -12,7 +12,10 @@ class Resume extends Component {
       <div>
         <HomeButton />
         <PageTitleText text="Resume"/>
-        <ResumeItems employmentDataSource={DataSource.DATABASE}/>
+        <ResumeItems 
+          employmentDataSource={DataSource.DATABASE}
+          educationDataSource={DataSource.DATABASE}
+        />
       </div>
     );
   }

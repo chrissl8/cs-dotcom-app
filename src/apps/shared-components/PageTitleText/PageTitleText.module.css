@@ -21,3 +21,15 @@
     padding-top: 2.5em;
   }
 }
+
+@media (min-width: 500px) and (max-width: 650px) {
+  .ResponsivePageTitle span {
+    padding-top: 2.5em;
+  }
+}
+
+@media (max-width: 770px) and (min-width: 1150px) {
+  .ResponsivePageTitle > span {
+    font-size: 0.5em;
+  }
+}

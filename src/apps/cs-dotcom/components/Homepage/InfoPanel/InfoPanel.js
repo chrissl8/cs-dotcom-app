@@ -7,15 +7,22 @@ import infoPanelData from './../../../assets/data/infopanel.json';
 
 const infoPanel = () => (
     <div>
-        <div className={classes.InfoPanelImage}><img src={panelImage} title="Long Branch, New Jersey 2021 taken by yours truly" alt="Long Branch, New Jersey 2021 taken by yours truly"/></div>
-        <PageTitleText text="Software_Professional" title/>
-        {infoPanelData.map((infoPanelEntry) => (
-            <InfoPanelItem 
-                key={infoPanelEntry.rank}
-                title={infoPanelEntry.title}
-                description={infoPanelEntry.description}
+        <div className={classes.InfoPanelImage}>
+            <img src={panelImage} 
+                title="Long Branch, New Jersey 2021 taken by yours truly" 
+                alt="Long Branch, New Jersey 2021 taken by yours truly"
             />
-        ))}
+        </div>
+            <div className={classes.InfoPanelContent}>
+                <PageTitleText text="Software_Professional" title/>
+            </div>
+            {infoPanelData.map((infoPanelEntry) => (
+                <InfoPanelItem 
+                    key={infoPanelEntry.rank}
+                    icon={infoPanelEntry.icon}
+                    description={infoPanelEntry.description}
+                />
+            ))}
     </div>   
 );
 

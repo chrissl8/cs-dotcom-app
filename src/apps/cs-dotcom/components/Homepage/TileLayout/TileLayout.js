@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./TileLayout.module.css";
 import TileCard from './../TileCard/TileCard'
 
-const tileLayout = (props) => (
+const tileLayout = () => (
   <div className={classes.TileLayout}>
     <div className={classes.Row}>
       <div className={classes.Column}><TileCard image="me_beard" page=""/></div>

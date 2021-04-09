@@ -65,8 +65,7 @@ const EmploymentAdmin = () => {
                 setMessageText("Successfully Saved Resume Data!");
                 setOpen(true);
             }).catch((err) => {
-                console.log("It doesnt work",err);
-                setMessageText(err);
+                console.log(err);
             }); 
             }
             catch(e)
@@ -94,6 +93,7 @@ const EmploymentAdmin = () => {
     return(
         <div className={classes.EmploymentCard}>
             <h2>Employment Admin</h2>
+            <p>Use the below editor to modify Employment data, using the expected JSON format.</p>
             <div className={classes.EmploymentForm}>
             <form onSubmit={saveResumeData}> 
             <textarea 
@@ -118,11 +118,6 @@ const EmploymentAdmin = () => {
             </div>
             </form>
             </div>
-
-            {/* {employmentData.map((data) => (
-            <p key={data.rank}>{data.company}</p>
-            ))}
-            {console.log(JSON.stringify(employmentData))} */}
         </div>
     )
 }
