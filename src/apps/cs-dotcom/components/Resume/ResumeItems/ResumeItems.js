@@ -5,34 +5,31 @@ import resumeJSONData from './../../../assets/data/resume.json';
 import EducationItem from './../EducationItem/EducationItem';
 import educationJSONData from './../../../assets/data/education.json';
 import SkillsItems from './../SkillsItems/SkillsItems';
-import axios from 'axios';
-import * as DataSource from '../../DataSource/DataSource';
+import * as DataSource from '../../../constants/DataSource/DataSource';
+import { fetchJSONDataFromDB } from './../../../utils/DatabaseAccess/DatabaseAccess';
+import * as DataSetName from './../../../constants/DataSetName/DataSetName';
 
 class ResumeItems extends Component {
 
-state = {
-    dbResumeData: [],
-    dbEducationData: []
-  }
+    state = {
+        dbResumeData: [],
+        dbEducationData: []
+    }
 
-  componentDidMount() {
-    axios
-      .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/resume.json`)
-      .then((res) => {
-        this.setState({ dbResumeData: res.data.resume });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    axios
-      .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/education.json`)
-      .then((res) => {
-        this.setState({ dbEducationData: res.data.education });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+    fetchResume = async () => {
+        const resumeData = await fetchJSONDataFromDB(DataSetName.RESUME);
+        this.setState({dbResumeData: resumeData.resume});
+    };
+
+    fetchEducation = async () => {
+        const educationData = await fetchJSONDataFromDB(DataSetName.EDUCATION);
+        this.setState({dbEducationData: educationData.education});
+    };
+
+    componentDidMount() {
+        this.fetchResume();
+        this.fetchEducation();
+    };
 
     render() {
 

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
-import firebase from 'firebase';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import classes from './SkillsAdmin.module.css';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
+import * as DataSetName from './../../../../constants/DataSetName/DataSetName';
+import { sendJSONDataToDB, fetchJSONDataFromDB } from './../../../../utils/DatabaseAccess/DatabaseAccess';
 let beautify = require("json-beautify");
-const parseJson = require('parse-json');
 
 const SkillsAdmin = () => {
 
@@ -27,9 +26,9 @@ const SkillsAdmin = () => {
     const [messageType, setMessageType] = useState("success"); 
     const styleClasses = useStyles();
 
-    function Alert(props) {
+    const Alert = (props) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
-      }
+    };
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -38,57 +37,25 @@ const SkillsAdmin = () => {
         setOpen(false);
     };
 
-    const fetchSkillsData = () => {
-        axios
-          .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/skills.json`)
-          .then((res) => {
-            setSkillsData(beautify(res.data, null, 2, 80));
-          }).then(() => {
-            
-        }).catch((err) => {
-            console.log(err);
-          });
-      }
+    const handleFieldChange = (event) => {
+      setSkillsData(event.target.value);
+    };
 
-      const sendSkillsDataToDB = () => {
-        firebase.auth().currentUser.getIdToken(true).then((idToken) => {
-            const headers = {
-                'Content-Type': 'application/json',
-              }
-            const patchUrl = 'https://cs-dotcom-app-default-rtdb.firebaseio.com/skills.json?auth=' + idToken;
-            try{
-                const skillsDataPayload = parseJson(skillsData);
-               axios
-            .patch(patchUrl, skillsDataPayload, headers)
-            .then((res) => {
-                setMessageType("success");
-                setMessageText("Successfully Saved Skills Data!");
-                setOpen(true);
-            }).catch((err) => {
-                console.log(err);
-            }); 
-            }
-            catch(e)
-            {
-                const errorMessage = e.name + ": " + e.message;
-                console.log(errorMessage);
-                setMessageType("error");
-                setMessageText(errorMessage);
-                setOpen(true);
-            }
-        });
-      }
-    
-      useEffect(() => {fetchSkillsData();},[]);
+    const fetchSkillsData = async () => {
+      setSkillsData(
+        beautify(await fetchJSONDataFromDB(DataSetName.SKILLS), null, 2, 80));};
 
-      const saveSkillsData = (event) => {
-        event.preventDefault();
-        sendSkillsDataToDB();
-      }
+    useEffect(() => {
+      fetchSkillsData();
+    },[]);
 
-      const handleFieldChange = (event) => {
-        setSkillsData(event.target.value);
-      }
+    const saveSkillsData = async (event) => {
+      event.preventDefault();
+      const res = await sendJSONDataToDB(DataSetName.SKILLS, skillsData);
+      setMessageType(res.messageType);
+      setMessageText(res.messageText);
+      setOpen(true);
+    };
 
     return(
         <div className={classes.SkillsCard}>

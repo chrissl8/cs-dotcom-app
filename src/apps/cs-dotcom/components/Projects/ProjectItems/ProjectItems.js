@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import classes from './ProjectItems.module.css';
 import ProjectItem from './../ProjectItem/ProjectItem';
 import projectJSONData from './../../../assets/data/projects.json';
-import * as DataSource from './../../DataSource/DataSource';
-import axios from 'axios';
+import { fetchJSONDataFromDB } from './../../../utils/DatabaseAccess/DatabaseAccess';
+import * as DataSource from './../../../constants/DataSource/DataSource';
+import * as DataSetName from './../../../constants/DataSetName/DataSetName';
 
 
 class ProjectItems extends Component {
@@ -11,17 +12,15 @@ class ProjectItems extends Component {
     state = {
         dbProjectsData: [],
       }
+
+    fetchProjects = async () => {
+        const projectsData = await fetchJSONDataFromDB(DataSetName.PROJECTS);
+        this.setState({dbProjectsData: projectsData.projects});
+    };
     
     componentDidMount() {
-        axios
-            .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/projects.json`)
-            .then((res) => {
-            this.setState({ dbProjectsData: res.data.projects });
-            })
-            .catch((err) => {
-            console.log(err);
-            });
-    }
+        this.fetchProjects();
+    };
 
     render() {
 

@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import PageTitleText from './../../../shared-components/PageTitleText/PageTitleText';
 import HomeButton from '../../../shared-components/navigation/HomeButton/HomeButton';
 import ResumeItems from '../../components/Resume/ResumeItems/ResumeItems';
-import * as DataSource from './../../components/DataSource/DataSource';
+import * as DataSource from './../../constants/DataSource/DataSource';
 
 class Resume extends Component {
+
+  componentDidMount() {
+    document.title = 'ChrisSlaight.com | Resume';
+  }
 
   render() {
 

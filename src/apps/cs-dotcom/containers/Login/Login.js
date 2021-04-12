@@ -15,6 +15,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
+    document.title = 'ChrisSlaight.com | Admin';
     auth.onAuthStateChanged(me => {
       this.setState({ me });
     });

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
-import firebase from 'firebase';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import classes from './EducationAdmin.module.css';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
+import * as DataSetName from './../../../../constants/DataSetName/DataSetName';
+import { sendJSONDataToDB, fetchJSONDataFromDB } from './../../../../utils/DatabaseAccess/DatabaseAccess';
 let beautify = require("json-beautify");
-const parseJson = require('parse-json');
+
 
 const EducationAdmin = () => {
 
@@ -27,9 +27,9 @@ const EducationAdmin = () => {
     const [messageType, setMessageType] = useState("success"); 
     const styleClasses = useStyles();
 
-    function Alert(props) {
+    const Alert = (props) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
-      }
+    };
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -38,57 +38,25 @@ const EducationAdmin = () => {
         setOpen(false);
     };
 
-    const fetchEducationData = () => {
-        axios
-          .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/education.json`)
-          .then((res) => {
-            setEducationData(beautify(res.data, null, 2, 80));
-          }).then(() => {
-            
-        }).catch((err) => {
-            console.log(err);
-          });
-      }
+    const handleFieldChange = (event) => {
+      setEducationData(event.target.value);
+    };
 
-      const sendEducationDataToDB = () => {
-        firebase.auth().currentUser.getIdToken(true).then((idToken) => {
-            const headers = {
-                'Content-Type': 'application/json',
-              }
-            const patchUrl = 'https://cs-dotcom-app-default-rtdb.firebaseio.com/education.json?auth=' + idToken;
-            try{
-                const educationDataPayload = parseJson(educationData);
-               axios
-            .patch(patchUrl, educationDataPayload, headers)
-            .then((res) => {
-                setMessageType("success");
-                setMessageText("Successfully Saved Education Data!");
-                setOpen(true);
-            }).catch((err) => {
-                console.log(err);
-            }); 
-            }
-            catch(e)
-            {
-                const errorMessage = e.name + ": " + e.message;
-                console.log(errorMessage);
-                setMessageType("error");
-                setMessageText(errorMessage);
-                setOpen(true);
-            }
-        });
-      }
+    const fetchEducationData = async () => {
+      setEducationData(
+        beautify(await fetchJSONDataFromDB(DataSetName.EDUCATION), null, 2, 80));};
     
-      useEffect(() => {fetchEducationData();},[]);
+    useEffect(() => {
+      fetchEducationData();
+    }, []);
 
-      const saveEduData = (event) => {
-        event.preventDefault();
-        sendEducationDataToDB();
-      }
-
-      const handleFieldChange = (event) => {
-        setEducationData(event.target.value);
-      }
+    const saveEduData = async (event) => {
+      event.preventDefault();
+      const res = await sendJSONDataToDB(DataSetName.EDUCATION, educationData);
+      setMessageType(res.messageType);
+      setMessageText(res.messageText);
+      setOpen(true);
+    };      
 
     return(
         <div className={classes.EducationCard}>

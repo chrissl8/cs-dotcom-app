@@ -4,6 +4,11 @@ import HomeButton from '../../../shared-components/navigation/HomeButton/HomeBut
 import PhotographyItems from './../../components/Photography/PhotographyItems/PhotographyItems';
 
 class Photography extends Component {
+
+  componentDidMount() {
+    document.title = 'ChrisSlaight.com | Photography';
+  }
+
   render() {
     return (
       <div>

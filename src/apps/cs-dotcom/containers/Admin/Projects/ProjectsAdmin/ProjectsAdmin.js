@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
-import firebase from 'firebase';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import classes from './ProjectsAdmin.module.css';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
+import * as DataSetName from './../../../../constants/DataSetName/DataSetName';
+import { sendJSONDataToDB, fetchJSONDataFromDB } from './../../../../utils/DatabaseAccess/DatabaseAccess';
 let beautify = require("json-beautify");
-const parseJson = require('parse-json');
 
 const ProjectsAdmin = () => {
 
@@ -27,9 +26,9 @@ const ProjectsAdmin = () => {
     const [messageType, setMessageType] = useState("success"); 
     const styleClasses = useStyles();
 
-    function Alert(props) {
+    const Alert = (props) => {
         return <MuiAlert elevation={6} variant="filled" {...props} />;
-      }
+    };
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -38,57 +37,27 @@ const ProjectsAdmin = () => {
         setOpen(false);
     };
 
-    const fetchProjectsData = () => {
-        axios
-          .get(`https://cs-dotcom-app-default-rtdb.firebaseio.com/projects.json`)
-          .then((res) => {
-            setProjectsData(beautify(res.data, null, 2, 80));
-          }).then(() => {
-            
-        }).catch((err) => {
-            console.log(err);
-          });
-      }
+    const handleFieldChange = (event) => {
+      setProjectsData(event.target.value);
+    };
 
-      const sendProjectsDataToDB = () => {
-        firebase.auth().currentUser.getIdToken(true).then((idToken) => {
-            const headers = {
-                'Content-Type': 'application/json',
-              }
-            const patchUrl = 'https://cs-dotcom-app-default-rtdb.firebaseio.com/projects.json?auth=' + idToken;
-            try{
-                const projectsDataPayload = parseJson(projectsData);
-               axios
-            .patch(patchUrl, projectsDataPayload, headers)
-            .then((res) => {
-                setMessageType("success");
-                setMessageText("Successfully Saved Projects Data!");
-                setOpen(true);
-            }).catch((err) => {
-                console.log(err);
-            }); 
-            }
-            catch(e)
-            {
-                const errorMessage = e.name + ": " + e.message;
-                console.log(errorMessage);
-                setMessageType("error");
-                setMessageText(errorMessage);
-                setOpen(true);
-            }
-        });
-      }
+    const fetchProjectsData = async () => {
+      setProjectsData(
+        beautify(await fetchJSONDataFromDB(DataSetName.PROJECTS), null, 2, 80));};
+
     
-      useEffect(() => {fetchProjectsData();},[]);
+    useEffect(() => {
+      document.title = 'ChrisSlaight.com | Admin';
+      fetchProjectsData();
+    },[]);
 
-      const saveProjectsData = (event) => {
-        event.preventDefault();
-        sendProjectsDataToDB();
-      }
-
-      const handleFieldChange = (event) => {
-        setProjectsData(event.target.value);
-      }
+    const saveProjectsData = async (event) => {
+      event.preventDefault();
+      const res = await sendJSONDataToDB(DataSetName.PROJECTS, projectsData);
+      setMessageType(res.messageType);
+      setMessageText(res.messageText);
+      setOpen(true);
+    };
 
     return(
         <div className={classes.ProjectsCard}>

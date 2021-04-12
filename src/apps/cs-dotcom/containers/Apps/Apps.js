@@ -3,6 +3,11 @@ import PageTitleText from './../../../shared-components/PageTitleText/PageTitleT
 import HomeButton from '../../../shared-components/navigation/HomeButton/HomeButton';
 
 class Apps extends Component {
+
+  componentDidMount() {
+    document.title = 'ChrisSlaight.com | Apps';
+  }
+
   render() {
     return (
       <div>
