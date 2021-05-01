@@ -8,22 +8,25 @@ import SkillsItems from './../SkillsItems/SkillsItems';
 import * as DataSource from '../../../constants/DataSource/DataSource';
 import { fetchJSONDataFromDB } from './../../../utils/DatabaseAccess/DatabaseAccess';
 import * as DataSetName from './../../../constants/DataSetName/DataSetName';
+import Spinner from '../../../../shared-components/Spinner/Spinner';
 
 class ResumeItems extends Component {
 
     state = {
         dbResumeData: [],
-        dbEducationData: []
+        dbEducationData: [],
+        employmentLoading: true,
+        educationLoading: true
     }
 
     fetchResume = async () => {
         const resumeData = await fetchJSONDataFromDB(DataSetName.RESUME);
-        this.setState({dbResumeData: resumeData.resume});
+        this.setState({dbResumeData: resumeData.resume, employmentLoading: false});
     };
 
     fetchEducation = async () => {
         const educationData = await fetchJSONDataFromDB(DataSetName.EDUCATION);
-        this.setState({dbEducationData: educationData.education});
+        this.setState({dbEducationData: educationData.education, educationLoading: false});
     };
 
     componentDidMount() {
@@ -57,30 +60,38 @@ class ResumeItems extends Component {
 
         return(
             <div className={classes.ResumeItems}>
-                <h2>Employment</h2>
-                {employmentDataObject.map((resumeEntry) => (
-                <ResumeItem 
-                    key={resumeEntry.rank}
-                    company={resumeEntry.company}
-                    jobTitle={resumeEntry.jobTitle}
-                    location={resumeEntry.location}
-                    jobStart={resumeEntry.jobStart}
-                    jobEnd={resumeEntry.jobEnd}
-                    jobDescription={resumeEntry.jobDescription}
-                />
-            ))}
-                <h2>Education &amp; Certifications</h2>
-                {educationDataObject.map((educationEntry) => (
-                    <EducationItem 
-                        key={educationEntry.rank}
-                        institution={educationEntry.institution}
-                        program={educationEntry.program}
-                        date={educationEntry.date}
-                        comment={educationEntry.comment}
-                    />
-                ))}
-                <h2>Skills &amp; Expertise</h2>
-                <SkillsItems skillsDataSource={DataSource.DATABASE}/>
+                <div className={classes.ResumeItemColumn}>
+                    <h2>Employment</h2>
+                    {this.state.employmentLoading ? <Spinner /> : null}
+                    {employmentDataObject.map((resumeEntry) => (
+                        <ResumeItem 
+                            key={resumeEntry.rank}
+                            company={resumeEntry.company}
+                            jobTitle={resumeEntry.jobTitle}
+                            location={resumeEntry.location}
+                            jobStart={resumeEntry.jobStart}
+                            jobEnd={resumeEntry.jobEnd}
+                            jobDescription={resumeEntry.jobDescription}
+                        />
+                    ))}
+                </div>
+                <div className={classes.ResumeItemColumn}>
+                    <h2>Skills &amp; Expertise</h2>
+                    <SkillsItems skillsDataSource={DataSource.DATABASE}/>
+                </div>
+                <div className={classes.ResumeItemColumn}>
+                    <h2>Education &amp; Certifications</h2>
+                    {this.state.educationLoading ? <Spinner /> : null}
+                    {educationDataObject.map((educationEntry) => (
+                        <EducationItem 
+                            key={educationEntry.rank}
+                            institution={educationEntry.institution}
+                            program={educationEntry.program}
+                            date={educationEntry.date}
+                            comment={educationEntry.comment}
+                        />
+                    ))}
+                </div>
             </div>
         )
     }

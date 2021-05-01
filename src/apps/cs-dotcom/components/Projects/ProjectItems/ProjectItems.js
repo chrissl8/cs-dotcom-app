@@ -5,17 +5,19 @@ import projectJSONData from './../../../assets/data/projects.json';
 import { fetchJSONDataFromDB } from './../../../utils/DatabaseAccess/DatabaseAccess';
 import * as DataSource from './../../../constants/DataSource/DataSource';
 import * as DataSetName from './../../../constants/DataSetName/DataSetName';
+import Spinner from '../../../../shared-components/Spinner/Spinner';
 
 
 class ProjectItems extends Component {
 
     state = {
         dbProjectsData: [],
+        loading: true
       }
 
     fetchProjects = async () => {
         const projectsData = await fetchJSONDataFromDB(DataSetName.PROJECTS);
-        this.setState({dbProjectsData: projectsData.projects});
+        this.setState({dbProjectsData: projectsData.projects, loading: false});
     };
     
     componentDidMount() {
@@ -37,17 +39,19 @@ class ProjectItems extends Component {
         }
 
         return (
-        <div className={classes.ProjectItems}>
-            {projectsDataObject.map((projectEntry) => (
-                <ProjectItem 
-                    key={projectEntry.rank}
-                    name={projectEntry.name}
-                    description={projectEntry.description}
-                    url={projectEntry.url}
-                />
-            ))}
-        </div>
-        
+        <React.Fragment>
+            {this.state.loading ? <Spinner /> : null}
+            <div className={classes.ProjectItems}>
+                {projectsDataObject.map((projectEntry) => (
+                    <ProjectItem 
+                        key={projectEntry.rank}
+                        name={projectEntry.name}
+                        description={projectEntry.description}
+                        url={projectEntry.url}
+                    />
+                ))}
+            </div>
+        </React.Fragment>
         )
     }
 }

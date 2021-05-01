@@ -1,42 +1,26 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import PageTitleText from './../../../shared-components/PageTitleText/PageTitleText';
 import HomeButton from '../../../shared-components/navigation/HomeButton/HomeButton';
 import LoginForm from './../../components/Login/LoginForm/LoginForm';
-import { auth } from "./../../../../firebase";
+import { AuthContext } from './../../context/authContext/authContext';
+import { Redirect } from 'react-router-dom';
 
-class Login extends Component {
+const Login = () => {
 
-  constructor() {
-    super();
-    console.log("user", auth.currentUser);
-    this.state = {
-      me: auth.currentUser
-    };
-  }
+  const authContext = useContext(AuthContext);
 
-  componentDidMount() {
-    document.title = 'ChrisSlaight.com | Admin';
-    auth.onAuthStateChanged(me => {
-      this.setState({ me });
-    });
-  }
+  let render = <Redirect to="/admin" />;
 
-  handleSignIn = history => (email, password) => {
-    return auth.signInWithEmailAndPassword(email, password).then(() => {
-      return this.props.history.push("/admin");
-    });
-  };
-
-  render() {
-
-    return (
+  if(!authContext.isAuth) {
+    render = (
       <div>
         <HomeButton />
         <PageTitleText text="Login"/>
-        <LoginForm onSubmit={this.handleSignIn(window.history)} />
+        <LoginForm/>
       </div>
-    );
+    )
   }
+    return render;
 }
 
 export default Login;

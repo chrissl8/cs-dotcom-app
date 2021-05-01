@@ -1,61 +1,46 @@
-import React, { Component } from "react";
+import React, { useState, useContext } from "react";
 import classes from './LoginForm.module.css';
+import { AuthContext } from './../../../context/authContext/authContext';
+import { useHistory } from 'react-router-dom';
 
-class LoginForm extends Component {
+const LoginForm = () => {
 
-    constructor() {
-        super();
-        this.state = {
-          email: "",
-          password: ""
-        };
-      }
-    
-      handleSubmit = e => {
-        e.preventDefault();
-        const { onSubmit } = this.props;
-        const { email, password } = this.state;
-        if (onSubmit) {
-          this.setState({ submitting: true });
-          onSubmit(email, password);
-        }
-      };
+    const authContext = useContext(AuthContext);
+    const history = useHistory();
 
-      handleChange = key => e => {
-        this.setState({ [key]: e.target.value });
-      };
-    
-render () {
-    const { email, password } = this.state;
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      authContext.login(email,password).then(() => {
+        history.push('/admin');
+      });
+    }
+
     return (
         <div className={classes.LoginForm}>
           <h1 className="">Sign In</h1>
           <div>
-            <form className="" onSubmit={this.handleSubmit}>
+            <form className="" onSubmit={handleSubmit}>
             <div className={classes.FormItems}>
-              <label htmlFor="userEmail" className="block">
-                Email:
-              </label>
               <input
                 type="email"
                 name="userEmail"
                 value = {email}
-                placeholder="e.g: myemail@email.com"
+                placeholder="email"
                 id="userEmail"
-                onChange = {this.handleChange("email")}
+                onChange = {e => {setEmail(e.target.value)}}
               />
             </div>
             <div className={classes.FormItems}>
-              <label htmlFor="userPassword" className="block">
-                Password:
-              </label>
               <input
                 type="password"
                 name="userPassword"
                 value = {password}
-                placeholder="Your Password"
+                placeholder="password"
                 id="userPassword"
-                onChange = {this.handleChange("password")}
+                onChange = {e => {setPassword(e.target.value)}}
               />
             </div>
               <button>
@@ -65,7 +50,6 @@ render () {
           </div>
         </div>
         )
-    }
       
 };
 

@@ -1,57 +1,50 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import React from "react";
+import { Route, Switch} from "react-router-dom";
 import Homepage from "./apps/cs-dotcom/containers/Homepage/Homepage";
-import Resume from "./apps/cs-dotcom/containers/Resume/Resume";
-import Projects from "./apps/cs-dotcom/containers/Projects/Projects";
-import Apps from "./apps/cs-dotcom/containers/Apps/Apps";
-import Photography from "./apps/cs-dotcom/containers/Photography/Photography";
 import Contact from "./apps/cs-dotcom/containers/Contact/Contact";
 import Login from './apps/cs-dotcom/containers/Login/Login';
 import Admin from './apps/cs-dotcom/containers/Admin/Admin';
 import Layout from "./apps/cs-dotcom/containers/Layout/Layout";
 import ScrollToTop from "./ScrollToTop";
 import "./App.css";
-import withAuthProtection from './apps/cs-dotcom/containers/Login/withAuthProtection';
-import { auth } from './firebase';
+import asyncComponent from './apps/shared-components/asyncComponent/asyncComponent';
 
-const ProtectedAdmin = withAuthProtection("/login")(Admin);
+const asyncResume = asyncComponent(() => {
+  return import('./apps/cs-dotcom/containers/Resume/Resume');
+});
 
-class App extends Component {
+const asyncProjects = asyncComponent(() => {
+  return import('./apps/cs-dotcom/containers/Projects/Projects');
+});
 
-  state = {
-    me: auth.currentUser
-  };
+const asyncApps = asyncComponent(() => {
+  return import('./apps/cs-dotcom/containers/Apps/Apps');
+});
 
-  componentDidMount() {
-    auth.onAuthStateChanged(me => {
-      this.setState({ me });
-    });
-  }
+const asyncPhotography = asyncComponent(() => {
+  return import('./apps/cs-dotcom/containers/Photography/Photography');
+});
 
-  render() {
-    const { me } = this.state;
+const App = () => {
+
     return (
       <div className="App">
         <Layout>
           <Switch>
             <ScrollToTop>
               <Route path="/" exact component={Homepage} />
-              <Route path="/resume" component={Resume} />
-              <Route path="/projects" component={Projects} />
-              <Route path="/apps" component={Apps} />
-              <Route path="/photography" component={Photography} />
+              <Route path="/resume" component={asyncResume} />
+              <Route path="/projects" component={asyncProjects} />
+              <Route path="/apps" component={asyncApps} />
+              <Route path="/photography" component={asyncPhotography} />
               <Route path="/contact" component={Contact} />
               <Route path="/login" component={Login} />
-              <Route path="/admin" render={ props => (
-                  <ProtectedAdmin {...props} me={me} />
-                )
-              } />
+              <Route path="/admin" component={Admin} />
             </ScrollToTop>
           </Switch>
         </Layout>
       </div>
     );
-  }
 }
 
 export default App;

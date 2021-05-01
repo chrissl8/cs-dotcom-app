@@ -16,13 +16,13 @@ html,
 body {
   width: auto !important;
   overflow-x: hidden !important;
-  background-color: #121212;
+  background-color: #313131;
   /* background-image: url("https://chrisslaight.com/images/black-smooth-textured-paper.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background: #121212;
+  background: #313131;
   background-attachment: scroll;
 }
 

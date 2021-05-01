@@ -1,12 +1,21 @@
 .ResumeItems {
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: 2em;
+  margin-right: 2em;
   text-align: left;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 
-@media (max-width: 499px) {
+.ResumeItemColumn {
+  padding: 0 10px;
+}
+
+.ResumeItemColumn h2 {
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
   .ResumeItems {
-    margin-left: 2em;
-    margin-right: 2em;
+    display: inline;
   }
 }
