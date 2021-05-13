@@ -14,7 +14,7 @@ const infoPanelItem = (props) => {
 
     return (
         <React.Fragment>
-            <h3><FontAwesomeIcon size="1x" icon={selectedIcon} /></h3>
+            <h3><FontAwesomeIcon color="#24cc44" size="1x" icon={selectedIcon} /></h3>
             <p>{props.description}</p>
         </React.Fragment>
     );

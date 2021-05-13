@@ -1,12 +1,13 @@
 import React from "react";
-import classes from './EducationItem.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendar} from '@fortawesome/free-solid-svg-icons';
 
 const educationItem = (props) => {
 
     return (
-        <div className={classes.EducationItem}>
-            <p><strong>{props.institution}</strong>: <i>{props.program}</i></p>
-            <p>{props.date}</p>
+        <div className="Card">
+            <p><strong>{props.institution}</strong> <i>{props.program}</i><br />
+            <FontAwesomeIcon color="#24cc44" size="1x" icon={faCalendar} /> {props.date}</p>
             <p>{props.comment}</p>
         </div>
     )

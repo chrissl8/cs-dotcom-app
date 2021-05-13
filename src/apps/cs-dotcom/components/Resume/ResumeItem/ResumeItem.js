@@ -1,17 +1,19 @@
 import React from "react";
-import classes from './ResumeItem.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendar, faMapMarked} from '@fortawesome/free-solid-svg-icons';
 
 const resumeItem = (props) => {
 
     const descriptionItems = props.jobDescription.map((desc) => (
-    <li key={Math.random()}>{desc}</li> 
+    <li key={desc}>{desc}</li> 
     )
   );
 
     return (
-        <div className={classes.ResumeItem}>
-            <p><strong>{props.company}</strong>: <i>{props.jobTitle}</i></p>
-            <p>{props.location} &#183; {props.jobStart} - {props.jobEnd}</p> 
+        <div className="Card">
+            <p><strong>{props.company}</strong> <i>{props.jobTitle}</i><br/>
+            <FontAwesomeIcon color="#24cc44" size="1x" icon={faMapMarked} /> {props.location}<br/>
+            <FontAwesomeIcon color="#24cc44" size="1x" icon={faCalendar} /> {props.jobStart} - {props.jobEnd}</p> 
             <ul>
                 {descriptionItems}
             </ul>           

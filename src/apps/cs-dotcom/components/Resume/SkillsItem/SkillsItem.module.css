@@ -10,13 +10,13 @@
 .SkillsLevel1 {
   font-size: 2rem;
   text-shadow: 0px 0px 10px #fff;
-  box-shadow: 0px 0px 10px #fff;
+  box-shadow: 0px 0px 10px #24cc44;
 }
 
 .SkillsLevel2 {
   font-size: 1.5rem;
   text-shadow: 0px 0px 5px #fff;
-  box-shadow: 0px 0px 5px #fff;
+  box-shadow: 0px 0px 5px #24cc44;
 }
 
 .SkillsLevel3 {

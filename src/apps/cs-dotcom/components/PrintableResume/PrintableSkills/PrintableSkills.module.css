@@ -1,0 +1,7 @@
+.PrintableSkills {
+text-align: right;
+}
+
+.PrintableSkills li {
+    list-style: none;
+}

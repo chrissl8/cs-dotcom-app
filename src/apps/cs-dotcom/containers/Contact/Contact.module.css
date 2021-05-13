@@ -1,7 +1,7 @@
 .Contact {
   margin: 1em 23em 1em 23em;
   padding: 1em;
-  border-radius: 20px;
+  border-radius: 5px;
   background: rgba(75, 75, 75, 0.3);
   box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
 }

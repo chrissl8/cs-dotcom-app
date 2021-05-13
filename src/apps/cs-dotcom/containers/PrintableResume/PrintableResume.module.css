@@ -1,0 +1,22 @@
+.PrintableResume {
+    border: solid white 1px;
+    margin: 0 5%;
+    background-color: white;
+    color: black;
+    padding: 0 20px;
+}
+
+.NameHeading {
+    font-size: 3em;
+}
+
+.EmpAndSkillsColumns {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+@media (max-width: 769px) {
+    .PrintableResume {
+        font-size: x-small;
+    }
+  }

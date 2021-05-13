@@ -14,17 +14,17 @@ class Contact extends Component {
         <PageTitleText text="Contact"/>
         <div className={classes.Contact}>
           <div className={classes.ContactItem}>
-            <a href="https://www.linkedin.com/in/chrisjslaight/" target="blank"><FontAwesomeIcon size="1x" icon={faLinkedinIn} /> 
+            <a href="https://www.linkedin.com/in/chrisjslaight/" target="blank"><FontAwesomeIcon color="#24cc44" size="1x" icon={faLinkedinIn} /> 
               <span className={classes.ContactText}>Chris Slaight on LinkedIn</span><FontAwesomeIcon size="xs" icon={faExternalLinkAlt} />
             </a>
           </div>
           <div className={classes.ContactItem}>
-            <a href="https://github.com/chrissl8/" target="blank"><FontAwesomeIcon size="1x" icon={faGithub} /> 
+            <a href="https://github.com/chrissl8/" target="blank"><FontAwesomeIcon color="#24cc44" size="1x" icon={faGithub} /> 
               <span className={classes.ContactText}>github.com/chrissl8</span><FontAwesomeIcon size="xs" icon={faExternalLinkAlt} />
             </a>
           </div>
           <div className={classes.ContactItem}>
-            <FontAwesomeIcon size="1x" icon={faEnvelope} />
+            <FontAwesomeIcon color="#24cc44" size="1x" icon={faEnvelope} />
             <span className={classes.ContactText}>chrisjslaight at gmail dot com</span>
           </div>
         </div>

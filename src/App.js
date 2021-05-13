@@ -13,6 +13,10 @@ const asyncResume = asyncComponent(() => {
   return import('./apps/cs-dotcom/containers/Resume/Resume');
 });
 
+const asyncPrintableResume = asyncComponent(() => {
+  return import('./apps/cs-dotcom/containers/PrintableResume/PrintableResume.js');
+});
+
 const asyncProjects = asyncComponent(() => {
   return import('./apps/cs-dotcom/containers/Projects/Projects');
 });
@@ -34,6 +38,7 @@ const App = () => {
             <ScrollToTop>
               <Route path="/" exact component={Homepage} />
               <Route path="/resume" component={asyncResume} />
+              <Route path="/printableresume" component={asyncPrintableResume}/>
               <Route path="/projects" component={asyncProjects} />
               <Route path="/apps" component={asyncApps} />
               <Route path="/photography" component={asyncPhotography} />

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./InfoPanel.module.css";
-import panelImage from './../../../assets/images/long-branch-bg.jpg';
+import panelImage from './../../../assets/images/jamaica-bay-bg.jpg';
 import PageTitleText from './../../../../shared-components/PageTitleText/PageTitleText';
 import InfoPanelItem from './../InfoPanelItem/InfoPanelItem';
 import infoPanelData from './../../../assets/data/infopanel.json';
@@ -9,8 +9,8 @@ const infoPanel = () => (
     <div>
         <div className={classes.InfoPanelImage}>
             <img src={panelImage} 
-                title="Long Branch, New Jersey 2021 taken by yours truly" 
-                alt="Long Branch, New Jersey 2021 taken by yours truly"
+                title="Sunset over NYC from Jamaica Bay in The Rockaways, taken by yours truly in May 2021" 
+                alt="Sunset over NYC from Jamaica Bay in The Rockaways, taken by yours truly in May 2021"
             />
         </div>
             <div className={classes.InfoPanelContent}>

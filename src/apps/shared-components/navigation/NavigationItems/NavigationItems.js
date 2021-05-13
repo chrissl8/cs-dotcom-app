@@ -7,20 +7,20 @@ import { faHome, faCamera, faPaperclip, faFolder, faEnvelope, faCode, faUser} fr
 const navigationItems = (props) => (
   <ul className={classes.NavigationItems} onClick={props.clicked}>
     <NavigationItem link="/" exact>
-      <FontAwesomeIcon size="1x" icon={faHome} /> Home
+      <FontAwesomeIcon color="#24cc44" size="1x" icon={faHome} /> Home
     </NavigationItem>
     <NavigationItem link="/resume">
-      <FontAwesomeIcon size="1x" icon={faPaperclip} /> Resume</NavigationItem>
+      <FontAwesomeIcon color="#24cc44" size="1x" icon={faPaperclip} /> Resume</NavigationItem>
     <NavigationItem link="/projects">
-      <FontAwesomeIcon size="1x" icon={faFolder} /> Projects</NavigationItem>
+      <FontAwesomeIcon color="#24cc44" size="1x" icon={faFolder} /> Projects</NavigationItem>
     <NavigationItem link="/apps">
-      <FontAwesomeIcon size="1x" icon={faCode} /> Apps</NavigationItem>
+      <FontAwesomeIcon color="#24cc44" size="1x" icon={faCode} /> Apps</NavigationItem>
     <NavigationItem link="/photography">
-      <FontAwesomeIcon size="1x" icon={faCamera} /> Photography</NavigationItem>
+      <FontAwesomeIcon color="#24cc44" size="1x" icon={faCamera} /> Photography</NavigationItem>
     <NavigationItem link="/contact">
-      <FontAwesomeIcon size="1x" icon={faEnvelope} /> Contact</NavigationItem>
+      <FontAwesomeIcon color="#24cc44" size="1x" icon={faEnvelope} /> Contact</NavigationItem>
     <NavigationItem link="/admin">
-      <FontAwesomeIcon size="1x" icon={faUser} /> Admin</NavigationItem>
+      <FontAwesomeIcon color="#24cc44" size="1x" icon={faUser} /> Admin</NavigationItem>
   </ul>
 );
 

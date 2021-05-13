@@ -1,3 +1,7 @@
+.Name {
+  text-shadow: 1px 1px 10px black;
+}
+
 .Blink {
   animation: blinker 0.8s linear infinite;
 }

@@ -1,0 +1,7 @@
+.PrintableEmployment {
+    text-align: left;
+}
+
+.PrintableEmployment li {
+    list-style: circle;
+}

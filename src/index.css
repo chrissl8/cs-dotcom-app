@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  /* font-family: "Rubik", sans-serif; */
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #ebebed;
@@ -42,4 +43,41 @@ body:before {
   -o-background-size: cover;
   background-size: cover;
   background-attachment: scroll;
+}
+
+.Card {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background: rgba(75, 75, 75, 0.3);
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+}
+
+.Card strong {
+  color: #24cc44;
+}
+
+.Card a {
+  text-decoration: none;
+  font-size: x-large;
+  color: white;
+}
+
+.Card li {
+  margin: 5px 0;
+}
+
+@media (max-width: 499px) {
+  .Card.ResumeItems {
+    padding: 0.3em;
+  }
+  .Card li {
+    font-size: 0.8em;
+    margin-left: -2em;
+  }
+
+  .Card p {
+    font-size: 0.8em;
+  }
 }

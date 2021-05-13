@@ -1,5 +1,4 @@
 import axios from 'axios';
-import firebase from 'firebase';
 const parseJson = require('parse-json');
 
 /**
@@ -16,9 +15,9 @@ export const sendJSONDataToDB = async (dataSetName, dataPayload) => {
         messageText: ''
     }
 
-    const idToken = await firebase.auth().currentUser.getIdToken(true);
+    //const idToken = await firebase.auth().currentUser.getIdToken(true);
 
-        const requestUrl = 'https://cs-dotcom-app-default-rtdb.firebaseio.com/' + dataSetName + '.json?auth=' + idToken;
+        const requestUrl = 'https://cs-dotcom-app-default-rtdb.firebaseio.com/' + dataSetName + '.json';
         const headers = { 'Content-Type': 'application/json'};
         
         try {
